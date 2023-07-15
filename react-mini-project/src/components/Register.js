@@ -56,7 +56,7 @@ function Register(){
               setEmail("");
               setPassword("");
 
-              navigate('/home');
+              navigate('/homepage');
             }
             catch(err){
               alert("User Registration Failed");

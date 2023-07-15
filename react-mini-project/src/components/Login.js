@@ -1,35 +1,26 @@
 import React, { useState } from "react";
-import { useNavigate , Route, Router } from "react-router-dom";
-import Home from "./Home";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-
   const navigate = useNavigate();
 
-  const [email , setEmail] = useState();
-  const [password , setPassword] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
 
-  function handleTextEmail(event)
-  {
-    setEmail(event.target.value)
+  function handleTextEmail(event) {
+    setEmail(event.target.value);
   }
 
-  function handleTextPassword(event)
-  {
-    setPassword(event.target.value)
+  function handleTextPassword(event) {
+    setPassword(event.target.value);
   }
 
-  function handleLogin()
-  {
-    if(email==null || password==null)
-    {   
-        alert("Invalid Email !");
+  function handleLogin() {
+    if (email == null || password == null) {
+      alert("Invalid Email !");
+    } else {
+      navigate("/homepage");
     }
-    else
-    {
-        navigate('/home');
-    }
-    
   }
   return (
     <div>
@@ -91,8 +82,6 @@ function Login() {
           </div>
         </div>
       </section>
-      
-
     </div>
   );
 }
